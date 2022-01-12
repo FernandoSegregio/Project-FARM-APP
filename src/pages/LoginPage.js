@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { AiOutlineEye,
+  AiOutlineEyeInvisible,
+  AiOutlineCopyrightCircle } from 'react-icons/ai';
 import foodGif from '../images/foodGif.gif';
 
 function LoginPage({ history }) {
@@ -61,10 +63,8 @@ function LoginPage({ history }) {
               id="password"
               onChange={ ({ target }) => setPassword({ password: target.value }) }
               placeholder="Senha"
-              type={ !visible ? 'password' : 'number' }
+              type={ !visible ? 'password' : 'text' }
               value={ password.password }
-              pattern="[0-9]*"
-              inputmode="numeric"
             />
 
           </Form.Label>
@@ -87,6 +87,10 @@ function LoginPage({ history }) {
             Entrar
           </Button>
         </form>
+        <p className="farm">
+          <AiOutlineCopyrightCircle />
+          Product by FARM
+        </p>
       </div>
     </div>
   );
