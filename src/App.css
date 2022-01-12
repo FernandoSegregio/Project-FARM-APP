@@ -67,12 +67,16 @@ body {
 .header {
   align-items: center;
   background-color: rgb(227, 224, 224);
+  color: #5f5f63;
   display: flex;
   flex-direction: row;
   height: 50px;
   justify-content: space-between;
   padding: 5px 30px;
   padding-top: 5px;
+  position: relative;
+  width: 100vw;
+  z-index: 2;
 }
 
 .search-bar {
@@ -80,6 +84,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 .footer {
@@ -92,6 +97,7 @@ body {
   justify-content: space-around;
   position: fixed;
   width: 100vw;
+  z-index: 2;
 }
 
 
@@ -144,28 +150,54 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 80px;
+  padding-top: 70px;
+}
+
+.profile-page-container:before {
+  align-items: center;
+  background-image: url('./images/foodBackground.jpg');
+  content: ' ';
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  opacity: 0.15;
+  padding-top: 50px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
 }
 
 .profile-page-container button {
   align-items: center;
   background-color: #fafafa;
+  border: 3px solid rgb(95, 95, 99);
+  color: rgb(95, 95, 99);
   display: flex;
   flex-direction: column;
   font-size: 18px;
   height: 60px;
   justify-content: center;
   margin: 10px;
+  position: relative;
   width: 250px;
+  z-index: 2;
 }
 
 .profile-page-container a {
+  position: relative;
   text-decoration: none;
+  z-index: 2;
 }
 
 .profile-email {
+  color: rgb(95, 95, 99);
   font-size: 20px;
   padding: 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .start-recipe {
@@ -449,4 +481,83 @@ body {
 
 .recipe-details-header h1 {
   margin: 4px;
+}
+
+.button-visible {
+  background-color: transparent;
+  position: absolute;
+  right: 90px;
+  z-index: 5;
+}
+
+.icon-eye {
+  font-size: 20px;
+}
+
+.box-radio {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.box-radio label {
+  display: flex;
+}
+
+.input-group .mb1 {
+  text-align: center;
+  width: 80%;
+}
+
+.input-group-prepend {
+  display: flex;
+  margin: 2px;
+  padding: 2px;
+}
+
+.form-label {
+  display: flex;
+}
+
+.form-label > span {
+  border: none;
+  height: 35px;
+  padding: 0 5px;
+}
+
+.form-control {
+  flex: none;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+  width: 0;
+}
+
+.agoravai {
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+
+.agoravai > button {
+  width: 70px;
+}
+
+.agoravai > input {
+  text-align: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+.image-gravatar {
+  border-radius: 45px;
+  width: 100px;
+  z-index: 2;
+}
+
+.svg {
+  filter: invert(38%)
+    sepia(1%) saturate(1150%) hue-rotate(202deg) brightness(95%) contrast(93%);
 }
