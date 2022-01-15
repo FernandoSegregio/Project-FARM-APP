@@ -55,12 +55,12 @@ export default function DoneRecipeCard({ filterName }) {
 
   function renderDoneRecipes() {
     return (
-      <div>
+      <div className="card-done-container">
         {doneRecipesFromLocalStorage.length > 0
       && doneRecipesFromLocalStorage
         .filter(({ type }) => type.includes(filterName))
         .map((recipe, index) => (
-          <div key={ recipe.name }>
+          <div className="card-done-recipe"  key={ recipe.name }>
             <div>
               <Link to={ (`/${recipe.type}s/${recipe.id}`) }>
                 <img
@@ -127,7 +127,7 @@ export default function DoneRecipeCard({ filterName }) {
   }
 
   return (
-    <div className="card-done-container">{renderDoneRecipes()}</div>
+    <div>{renderDoneRecipes()}</div>
   );
 }
 
