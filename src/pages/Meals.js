@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import RecipesCards from '../components/body-components/RecipesCards';
 import RecipesCategories from '../components/body-components/RecipesCategories';
@@ -17,11 +16,5 @@ function Meals() {
     </div>
   );
 }
-
-Meals.propTypes = {
-  location: PropTypes.shape({
-    pathname: PropTypes.string,
-  }).isRequired,
-};
 
 export default Meals;

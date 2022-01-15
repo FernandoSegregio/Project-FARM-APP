@@ -103,8 +103,7 @@ body {
 
 .recipe-cards {
   display: flex;
-  flex-flow: column wrap;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   padding-bottom: 55px;
   padding-top: 5px;
@@ -527,14 +526,6 @@ body {
   height: 35px;
   padding: 0 5px;
 }
-
-/* .form-control {
-  flex: none;
-  min-width: 0;
-  padding: 0;
-  position: relative;
-  width: 0;
-} */
 
 .agoravai {
   align-items: center;
