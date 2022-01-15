@@ -15,7 +15,6 @@ function RecipeInProgress() {
         <GoBack />
         <h1>Receita em Andamento</h1>
       </div>
-
       <RecipeCard />
     </div>
   );

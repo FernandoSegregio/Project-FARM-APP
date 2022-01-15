@@ -95,7 +95,6 @@ function RecipeCard() {
               src={ shareIcon }
               type="image"
             />
-
             <FavoriteRecipeBtn />
           </div>
           {
