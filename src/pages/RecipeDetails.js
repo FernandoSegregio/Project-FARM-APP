@@ -125,7 +125,7 @@ function RecipeDetails() {
     return (
       <Link to={ `${history.location.pathname}/in-progress` }>
         <button
-          className="start-recipe"
+          className="start-finish-recipe-btn"
           data-testid="start-recipe-btn"
           type="button"
         >

@@ -200,7 +200,7 @@ body {
   z-index: 2;
 }
 
-.start-recipe {
+.start-finish-recipe-btn {
   align-items: center;
   background-color: rgba(190, 190, 190, 0.9);
   bottom: 0;
@@ -256,17 +256,6 @@ body {
 
 .through {
   text-decoration: line-through;
-}
-
-.button-finish-recipe {
-  background-color: rgba(190, 190, 190, 0.9);
-  bottom: 0;
-  font-size: 16px;
-  height: 41px;
-  left: 50%;
-  position: fixed;
-  transform: translateX(-50%);
-  width: 100%;
 }
 
 .icons-svg {

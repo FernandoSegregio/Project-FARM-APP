@@ -156,7 +156,7 @@ function RecipeCard() {
                       disabled={ doneRecipe }
                       data-testid="finish-recipe-btn"
                       type="button"
-                      className="button-finish-recipe"
+                      className="start-finish-recipe-btn"
                       onClick={ () => setAnyToLocalStorage(recipe, 'doneRecipes') }
                     >
                       Finalizar Receita
