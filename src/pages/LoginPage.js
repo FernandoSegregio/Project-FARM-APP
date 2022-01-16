@@ -17,6 +17,8 @@ function LoginPage({ history }) {
 
   const [visible, setVisible] = useState(false);
 
+  window.scrollTo(0, 0)
+
   function validateLogin() {
     const regexEmail = /\S+@\S+\.\S+/;
     const MIN_PASSWORD = 7;
