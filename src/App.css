@@ -266,6 +266,10 @@ body {
   margin-right: 12px;
 }
 
+.favorites-container {
+  padding-bottom: 60px;
+}
+
 .favorite-btn {
   height: 26px;
   width: 26px;

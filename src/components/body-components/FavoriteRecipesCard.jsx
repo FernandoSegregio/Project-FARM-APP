@@ -5,7 +5,7 @@ export default function FavoriteRecipesCard() {
   const [filterName, setFilterName] = useState('');
 
   return (
-    <div>
+    <div className="favorites-container">
       <div className="category-container">
         <button
           className="button-category"
