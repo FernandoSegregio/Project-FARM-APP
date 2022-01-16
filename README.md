@@ -1,9 +1,9 @@
 Sejam Bem Vindos ao App de receitas FARM!
 
 O projeto foi realizado como conclusão do módulo de Front-End da Trybe em colaboração com:
-*matheus santos
-@AlessandroFMello
-*fernando secgregio
+* Alessandro Mello: https://github.com/AlessandroFMello
+* Fernando Segregio: https://github.com/FernandoSegregio 
+* Matheus Santos: https://github.com/matheusg18
 
 Estou extremamente orgulhoso desse projeto, foi a primeira aplicação deste cunho que desenvolvi
 aprendi muitas coisas tais como:
