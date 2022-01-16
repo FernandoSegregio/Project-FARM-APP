@@ -16,6 +16,7 @@ function RecipesCards({ recipeType }) {
   // sobe requisito no avaliador
   useEffect(() => {
     initialFetch();
+    window.scrollTo(0, 0);
   }, [initialFetch]);
 
   useEffect(() => {
