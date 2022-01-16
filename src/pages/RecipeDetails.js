@@ -27,8 +27,6 @@ function RecipeDetails() {
     return `${baseUrl}${videoId}`;
   }
 
-  window.scrollTo(0, 0)
-
   useEffect(() => {
     const imInProgress = getLocalStorageFirstTime(
       pathname, params.id, () => '', 'getInProgress',
