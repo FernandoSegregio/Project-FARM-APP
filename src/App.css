@@ -99,7 +99,6 @@ body {
   z-index: 2;
 }
 
-
 .recipe-cards {
   display: flex;
   flex-flow: row wrap;
@@ -459,7 +458,9 @@ body {
 
 .already-done-span {
   color: rgba(220, 22, 22, 0.7);
+  display: flex;
   font-size: 22px;
+  justify-content: center;
 }
 
 .link-recomendation {
