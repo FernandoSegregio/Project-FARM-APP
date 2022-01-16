@@ -21,10 +21,12 @@ function RecipeDetails() {
   const [inProgress, setInProgress] = useState(false);
 
   function getYoutubeUrl() {
-    const baseUrl = 'https://www.youtube.com/embed/';
-    const videoId = recipe.strYoutube.split('=')[1];
+    if(Object.keys(recipe).length > 0) {
+      const baseUrl = 'https://www.youtube.com/embed/';
+      const videoId = recipe.strYoutube.split('=')[1];
 
-    return `${baseUrl}${videoId}`;
+      return `${baseUrl}${videoId}`;
+    }
   }
 
   useEffect(() => {
@@ -33,6 +35,8 @@ function RecipeDetails() {
     );
     if (imInProgress) {
       setInProgress(true);
+    } else {
+      setInProgress(false);
     }
   }, [
     getLocalStorageFirstTime,
@@ -61,7 +65,7 @@ function RecipeDetails() {
       const recipeName = wichRecipeType[recipe.type][0];
       const isDone = doneRecipes.some((el) => recipeName === el.name);
       if (!isDone) {
-        return setAlreadyDone(false);
+        setAlreadyDone(false);
       }
     }
   }, [
@@ -176,7 +180,6 @@ function RecipeDetails() {
               { recomendation.title }
             </h2>
           </div>
-
         </Link>
       ))
     );
