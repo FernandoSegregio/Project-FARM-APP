@@ -57,6 +57,13 @@ function RecipeDetails() {
         return setAlreadyDone(true);
       }
     }
+    if (alreadyDone && iAlreadyHaveRecipe) {
+      const recipeName = wichRecipeType[recipe.type][0];
+      const isDone = doneRecipes.some((el) => recipeName === el.name);
+      if (!isDone) {
+        return setAlreadyDone(false);
+      }
+    }
   }, [
     recipe,
     setAlreadyDone,

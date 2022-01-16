@@ -13,6 +13,7 @@ function RecipeCard() {
     recipe,
     getRecipe,
     doneRecipe,
+    alreadyDone,
     setAnyToLocalStorage,
   } = useContext(RecipesContext);
   const { pathname } = useLocation();
@@ -70,71 +71,113 @@ function RecipeCard() {
   const alcoholic = (getCategory(recipe) === 'Alcoholic');
 
   return (
-    <div>
-
-      <img
-        className="image-details"
-        src={ recipe.image }
-        alt={ recipe.title }
-        data-testid="recipe-photo"
-      />
-      <div className="header-recipe">
-        <div>
-          <h2 data-testid="recipe-title">{ recipe.title }</h2>
-          <p
-            data-testid="recipe-category"
-          >
-            { alcoholic ? age18 : getCategory(recipe) }
-          </p>
-          <div className="icons-svg">
-            <input
-              className="share-icon"
-              alt="Compartilhar"
-              data-testid="share-btn"
-              onClick={ getClipboard }
-              src={ shareIcon }
-              type="image"
+    <>
+      {
+        alreadyDone && (
+          <div>
+            <img
+              className="image-details"
+              src={ recipe.image }
+              alt={ recipe.title }
+              data-testid="recipe-photo"
             />
-            <FavoriteRecipeBtn />
+            <div className="header-recipe">
+              <div>
+                <h2 data-testid="recipe-title">{ recipe.title }</h2>
+                <p
+                  data-testid="recipe-category"
+                >
+                  { alcoholic ? age18 : getCategory(recipe) }
+                </p>
+                <div className="icons-svg">
+                  <input
+                    className="share-icon"
+                    alt="Compartilhar"
+                    data-testid="share-btn"
+                    onClick={ getClipboard }
+                    src={ shareIcon }
+                    type="image"
+                  />
+                  <FavoriteRecipeBtn />
+                </div>
+                {
+                  haveLink && (
+                    <p className="link-copy">Link copiado!</p>
+                  )
+                }
+              </div>
+            </div>
+            <span className='already-done-span'>Receita já realizada!</span>
           </div>
-          {
-            haveLink && (
-              <p className="link-copy">Link copiado!</p>
-            )
-          }
-        </div>
-      </div>
-
-      <div className="container-recipe">
-        <h1>Ingredients</h1>
-        <IngredientsList />
-        {
-          pathname.includes('in-progress') && (
-            <Link to="/receitas-feitas">
-              <button
-                disabled={ doneRecipe }
-                data-testid="finish-recipe-btn"
-                type="button"
-                className="button-finish-recipe"
-                onClick={ () => setAnyToLocalStorage(recipe, 'doneRecipes') }
+        )
+      }
+      {
+        !alreadyDone && (
+          <div>
+            <img
+              className="image-details"
+              src={ recipe.image }
+              alt={ recipe.title }
+              data-testid="recipe-photo"
+            />
+            <div className="header-recipe">
+              <div>
+                <h2 data-testid="recipe-title">{ recipe.title }</h2>
+                <p
+                  data-testid="recipe-category"
+                >
+                  { alcoholic ? age18 : getCategory(recipe) }
+                </p>
+                <div className="icons-svg">
+                  <input
+                    className="share-icon"
+                    alt="Compartilhar"
+                    data-testid="share-btn"
+                    onClick={ getClipboard }
+                    src={ shareIcon }
+                    type="image"
+                  />
+                  <FavoriteRecipeBtn />
+                </div>
+                {
+                  haveLink && (
+                    <p className="link-copy">Link copiado!</p>
+                  )
+                }
+              </div>
+            </div>
+            <div className="container-recipe">
+              <h1>Ingredients</h1>
+              <IngredientsList />
+              {
+                pathname.includes('in-progress') && (
+                  <Link to="/receitas-feitas">
+                    <button
+                      disabled={ doneRecipe }
+                      data-testid="finish-recipe-btn"
+                      type="button"
+                      className="button-finish-recipe"
+                      onClick={ () => setAnyToLocalStorage(recipe, 'doneRecipes') }
+                    >
+                      Finalizar Receita
+                    </button>
+                  </Link>
+                )
+              }
+              <h1>Instructions</h1>
+              <p
+                className="instructions"
+                data-testid="instructions"
               >
-                Finalizar Receita
-              </button>
-            </Link>
-          )
-        }
-        <h1>Instructions</h1>
-        <p
-          className="instructions"
-          data-testid="instructions"
-        >
-          {
-            recipe.strInstructions
-          }
-        </p>
-      </div>
-
-    </div>
+                {
+                  recipe.strInstructions
+                }
+              </p>
+            </div>
+          </div>
+        )
+      }
+    </>
   );
 }
 

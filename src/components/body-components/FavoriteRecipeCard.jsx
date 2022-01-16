@@ -71,12 +71,12 @@ export default function FavoriteRecipeCard({ filterName }) {
 
   function renderFavoriteRecipes() {
     return (
-      <div>
+      <>
         {favoriteRecipesFromLocalStorage.length > 0
       && favoriteRecipesFromLocalStorage
         .filter(({ type }) => type.includes(filterName))
         .map((recipe, index) => (
-          <div key={ recipe.name }>
+          <div className="card-favorite-recipe" key={ recipe.name }>
             <div>
               <Link
                 to={ (`/${recipe.type}s/${recipe.id}`) }
@@ -133,7 +133,7 @@ export default function FavoriteRecipeCard({ filterName }) {
             </div>
           </div>
         ))}
-      </div>
+      </>
     );
   }
 
