@@ -1,8 +1,10 @@
 Sejam Bem Vindos ao App de receitas FARM!
 
-O projeto foi realizado como conclusão do módulo de Front-End da Trybe em colaboração com:
-* Alessandro Mello: https://github.com/AlessandroFMello
+O projeto foi realizado como conclusão do módulo de Front-End da Trybe pelos Devs:
+
 * Fernando Segregio: https://github.com/FernandoSegregio 
+* Alessandro Mello: https://github.com/AlessandroFMello
+* Robert Martins: https://github.com/RobertRodriguesMartins
 * Matheus Santos: https://github.com/matheusg18
 
 Estou extremamente orgulhoso desse projeto, foi a primeira aplicação deste cunho que desenvolvi
@@ -17,7 +19,7 @@ aprendi muitas coisas tais como:
 Além é claro de sentir na pele as metodólogias ágeis :)
 
 Organização:
-* Kanbam (Ferramenta Trello)
+* Kanban (Ferramenta Trello)
 * Dm (Daily meetings)
 * Colaboração
 * Baldes de café
